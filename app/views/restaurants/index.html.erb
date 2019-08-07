@@ -1,7 +1,7 @@
 <h1>Yelp</h1>
 <h2>All restaurants around you</h2>
 
-<ul>
+<ul class="restolist">
   <% @restaurants.each do |restaurant| %>
   <li>
     <h4><%= link_to restaurant.name, restaurant_path(restaurant) %></h4>

@@ -7,6 +7,7 @@ class RestaurantsController < ApplicationController
 
   def show
     @reviews = Review.all.select { |review| review.restaurant_id.to_i == params[:id].to_i }
+    @review = Review.new
   end
 
   def new

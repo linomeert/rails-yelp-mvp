@@ -11,3 +11,97 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  font-size:16px;
+  background: whitesmoke;
+  font-weight: 100;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Roboto Slab', serif;
+  color:#313131;
+}
+
+.container {
+  padding:40px 0px;
+  width:70%;
+}
+
+.resto {
+  padding:30px 0px;
+
+  ul {
+    padding:0px;
+    li {
+      list-style-type: none;
+      margin:15px 0px;
+    }
+  }
+
+
+}
+
+.formreview {
+  padding:40px 0px;
+}
+
+ul.restolist {
+  columns: 3;
+  padding:0px;
+  margin-top:40px;
+
+  li {
+    list-style-type: none;
+    background: white;
+    padding: 20px;
+    height: 138px;
+    margin: 7px 0px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 16px -5px rgba(199,199,199,0.52);
+    -moz-box-shadow: 0px 0px 16px -5px rgba(199,199,199,0.52);
+    box-shadow: 0px 0px 16px -5px rgba(199,199,199,0.52);
+    border-radius: 4px;
+    transition:all .2s;
+  }
+
+  li:hover {
+    background:#09a961;
+    color:white;
+
+    a {
+      color:white;
+    }
+  }
+}
+
+a {
+  color: #09a961
+}
+
+a:hover {
+  color: #09a800;
+  text-decoration: none;
+}
+
+.btn.btn-primary {
+  background:#09a961;
+  border:0px;
+  margin:10px 0px;
+}
+
+.review {
+  background: white;
+  padding: 20px;
+  margin: 7px 0px;
+  box-sizing: border-box;
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 16px -5px rgba(199,199,199,0.52);
+  -moz-box-shadow: 0px 0px 16px -5px rgba(199,199,199,0.52);
+  box-shadow: 0px 0px 16px -5px rgba(199,199,199,0.52);
+  border-radius: 4px;
+
+}

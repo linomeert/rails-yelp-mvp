@@ -1,23 +1,31 @@
 <h1>Yelp</h1>
-<h2><%= @restaurant.name %></h2>
-<ul>
-  <li><i class="fas fa-utensils"></i> <%= @restaurant.category %></li>
-  <li><i class="far fa-compass"></i> <%= @restaurant.address %></li>
-  <li><i class="fas fa-mobile-alt"></i> <%= @restaurant.phone_number %></li>
-</ul>
+<div class="resto">
+  <h2><%= @restaurant.name %></h2>
+  <ul>
+    <li><i class="fas fa-utensils"></i> <%= @restaurant.category %></li>
+    <li><i class="far fa-compass"></i> <%= @restaurant.address %></li>
+    <li><i class="fas fa-mobile-alt"></i> <%= @restaurant.phone_number %></li>
+  </ul>
 
+</div>
 
+<h3>Reviews</h3>
 <% @reviews.each do |review| %>
   <div class="review">
-    <p><span><%= review.rating %></span></p>
+    <p><span><% x = review.rating  %>
+    <% x.times {  %>
+     ⭐
+    <% } %>
+     </span></p>
+
     <p><%= review.content %></p>
   </div>
 <% end %>
 
+<div class="formreview">
+  <h3>Add a review for <%= @restaurant.name %></h3>
+  <%= render 'reviews/form', restaurant: @restaurant, review: @review %>
 
-<%= link_to "Add a review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
-<%= link_to "Back to list", restaurants_path, class: "btn btn-primary" %>
-
-
-
+  <%= link_to "Back to list", restaurants_path, class: "btn btn-primary" %>
+</div>
 
